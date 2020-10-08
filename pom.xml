@@ -77,14 +77,14 @@
     <distributionManagement>
         <downloadUrl>https://github.com/junit-team/junit4/wiki/Download-and-Install</downloadUrl>
         <snapshotRepository>
-            <id>junit-snapshot-repo</id>
-            <name>Nexus Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <id>snapshots</id>
+            <name>JUnit Snapshots</name>
+            <url>http://artifactory:8081/artifactory/libs-snapshot</url>
         </snapshotRepository>
         <repository>
-            <id>junit-releases-repo</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>central</id>
+            <name>JUnit Realeases</name>
+            <url>http://artifactory:8081/artifactory/libs-release</url>
         </repository>
         <site>
             <id>junit.github.io</id>
