@@ -7,3 +7,4 @@ For more information, please visit:
 * [Getting Started](https://github.com/junit-team/junit4/wiki/Getting-started)
 
 [![Build Status](https://travis-ci.org/junit-team/junit4.svg?branch=main)](https://travis-ci.org/junit-team/junit4)
+
