@@ -32,7 +32,7 @@ pipeline {
               expression { env.BRANCH_NAME == "main" }
             }
             steps { 
-              sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://artifactory:8081/artifactory/libs-snapshot/junit4-pipeline/junit4-pipeline.jar" -T ./target/junit4-pipeline.jar'
+              sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://artifactory:8081/artifactory/libs-snapshot/pipelines/junit4.jar" -T ./target/junit4.jar'
             }
         }
     }
