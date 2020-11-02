@@ -29,7 +29,11 @@ pipeline {
 
         stage ('Deploy') {
             steps { 
-              sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://artifactory:8081/artifactory/libs-snapshot/junit4-pipeline/junit4-pipeline.jar" -T ./target/junit4-pipeline.jar'
+              if (env.BRANCH_NAME == "main") {
+                sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://artifactory:8081/artifactory/libs-snapshot/junit4-pipeline/junit4-pipeline.jar" -T ./target/junit4-pipeline.jar'
+              } else {
+                echo "Skipping deploy for $env.BRANCH_NAME"
+              }
             }
         }
     }
